@@ -1,0 +1,328 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+
+}
+
+/* Hamburger icon styling */
+.navbar-hamburger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-hamburger h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+  margin-left: 8px;
+}
+
+/* Logo text styling */
+.navbar-logo {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-logo a:hover {
+  text-decoration: none;
+}
+
+.navbar-logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Search icon and label styling */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  gap: 5px;
+  /* Space between search icon and text */
+  margin-left: 15px;
+  /* Position closer to the hamburger icon */
+}
+
+.navbar-search h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+}
+
+/* Side menu styling */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  z-index: 1001;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Close button styling */
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 17px;
+  font-weight: 100;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.close-button:hover {
+  color: #555;
+}
+
+/* Main and footer links styling in side menu */
+.main-links,
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.main-links li,
+.footer-links li {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 250;
+}
+
+.main-links li a,
+.footer-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 250;
+}
+
+.footer-links {
+  margin-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+  font-size: 10px;
+  color: black;
+  font-weight: 50;
+}
+
+.main-links li a:hover,
+.footer-links li a:hover {
+  color: #555;
+}
+
+/* Enhanced blur effect for main content when menu is open */
+#main-content.blur {
+  filter: blur(39px);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+/* Search overlay styling */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1001;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popular-searches {
+  margin-top: 20px;
+
+}
+
+.popular-searches h4 {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+.popular-searches ul {
+  list-style: none;
+  padding: 0;
+}
+
+.popular-searches li {
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.popular-searches li :hover {
+  color: brown;
+}
+
+.popular-searches li a {
+  text-decoration: none;
+  color: black;
+}
+
+.suggested-products {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.suggested-products h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-weight: 250;
+  margin-top: 60px;
+}
+
+.product-slide {
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.product-slide img {
+  width: 150px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  filter: opacity(20);
+  mix-blend-mode: multiply;
+
+}
+
+.product-slide p {
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 350;
+}
+
+.product-slide a {
+  text-decoration: none;
+  color: black;
+  font-weight: 350;
+  list-style: none;
+}
+
+.product-slide p:hover {
+  color: brown;
+}
+
+.slider-arrow {
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.next-arrow {
+  right: -10px;
+}
+
+.prev-arrow {
+  left: -10px;
+}
+
+/* Enhanced blur effect */
+#main-content.blur {
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

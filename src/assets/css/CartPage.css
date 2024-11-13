@@ -1,0 +1,45 @@
+/* Make the footer static on the Cart page */
+.container-p {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cart-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    width: 100%;
+    gap: 30px;
+}
+
+.cart-page .cart-item img {
+    width: 200px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.container-p p {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    font-weight: 400;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 200;
+    color: #333;
+    margin-top: 20px;
+    margin-left: 270px;
+}
+
+/* Ensuring footer remains static at the bottom */
+footer {
+    position: static;
+    width: 100%;
+    margin-top: auto;
+}

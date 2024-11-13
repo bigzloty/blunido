@@ -1,0 +1,123 @@
+/* Existing CSS for product details */
+
+.product-detail {
+    display: flex;
+    width: 70%;
+    height: 50%;
+    margin-left: 120px;
+}
+
+.product-detail-image {
+    width: 50%;
+    margin-bottom: 40px;
+    margin-left: 300px;
+}
+
+.product-detail-image>img {
+    width: 80%;
+    height: 70%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.product-detail img {
+    width: 70%;
+    height: 300px;
+}
+
+.product-container button {
+    margin: 10px;
+    background-color: black;
+}
+
+.product-card-backBtn {
+    width: 120px;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 20px;
+    color: black;
+}
+
+.product-info-text h1 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: black;
+}
+
+.product-info-buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* New CSS for Related Products Slider Section */
+
+.related-products-slider {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.related-products-slider h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-slide {
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-slide:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.product-slide img {
+    width: 120px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 5px;
+    mix-blend-mode: multiply;
+}
+
+.product-slide p {
+    font-size: 13px;
+    font-weight: 200;
+    color: #333;
+    margin-top: 5px;
+}
+
+.slider-arrow {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.next-arrow {
+    right: -10px;
+}
+
+.prev-arrow {
+    left: -10px;
+}

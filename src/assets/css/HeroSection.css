@@ -1,0 +1,158 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-video-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-video-wrapper {
+    position: relative;
+    width: 50%;
+    height: 130%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.3s ease;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+/* Brighten the hovered video */
+.hero-video-wrapper:hover .hero-video {
+    filter: brightness(1.2);
+}
+
+/* Dim the other video when one is hovered */
+.hero-video-wrapper.fashion-video:hover~.beauty-video .hero-video,
+.hero-video-wrapper.beauty-video:hover~.fashion-video .hero-video,
+.hero-video-wrapper.fashion-video:hover+.beauty-video .hero-video,
+.hero-video-wrapper.beauty-video:hover+.fashion-video .hero-video {
+    filter: brightness(0.6);
+}
+
+
+.fashion-video:not(:hover) .hero-video {
+    filter: brightness(0.4);
+}
+
+
+/* Styling for the left video (Fashion & Accessories) */
+.fashion-content {
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fashion-content .video-title {
+    font-size: 1.8rem;
+}
+
+.fashion-content .shop-link {
+    font-size: 1rem;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.fashion-content .shop-link:hover {
+    color: #ddd;
+}
+
+/* Specific positioning for the play-pause icon in the fashion video */
+.fashion-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.fashion-icon:hover {
+    color: #ddd;
+}
+
+/* Styling for the right video (Fragrance & Beauty) */
+.beauty-content {
+    bottom: 20px;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.beauty-content .video-title {
+    font-size: 1.8rem;
+}
+
+.beauty-content .shop-link {
+    font-size: 1rem;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.beauty-content .shop-link:hover {
+    color: #ddd;
+}
+
+/* Specific positioning for the play-pause icon in the beauty video */
+.beauty-icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.beauty-icon:hover {
+    color: #ddd;
+}
+
+.hero-title {
+    position: absolute;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.overlay-content{
+    margin-top: 300px;
+}

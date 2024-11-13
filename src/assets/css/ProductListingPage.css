@@ -1,0 +1,107 @@
+/* Main container for the product listing page */
+.product-listing-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Navbar styling to ensure it remains sticky at the top */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Wrapper for content that includes the filter sidebar and product grid */
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* Sidebar filter styling */
+.filter-sidebar {
+    position: sticky;
+    top: 70px;
+    /* Adjust based on navbar height */
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    background-color: #f9f9f9;
+    height: calc(100vh - 70px);
+    /* Full height minus navbar */
+    overflow-y: auto;
+}
+
+.filter-sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+.filter-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.filter-sidebar li:hover,
+.filter-sidebar .active {
+    background-color: #ddd;
+}
+
+/* Product grid container */
+.product-grid {
+    flex: 1;
+    overflow-x: hidden;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 200;
+    margin-right: 290px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Grid styling for product cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        top: 0;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        padding: 0 10px;
+    }
+}

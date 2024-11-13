@@ -1,0 +1,323 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar container with sticky position */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured products section styling */
+.featured-products {
+    margin-top: 30px;
+    position: relative;
+}
+
+/* Header for products section with title and "Discover All" button */
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-weight: 100;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.discover-all-btn {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 300;
+    margin-right: 15px;
+    mix-blend-mode: multiply;
+}
+
+.discover-all-btn:hover {
+    background-color: white;
+}
+
+/* New wrapper for slider background */
+.slider-wrapper {
+    padding: 20px 0;
+    mix-blend-mode: multiply;
+}
+
+/* Arrow styling */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+    z-index: 2;
+}
+
+/* Positioning of previous and next arrows */
+.prevArrow {
+    left: 10px;
+}
+
+.nextArrow {
+    right: 10px;
+}
+
+/* Add gap between slides */
+.slick-slide {
+    padding: 0 10px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+/* Slide item alignment */
+.slick-slide>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Product card sizing for consistency */
+.product-card {
+    width: 250px;
+    height: 350px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-slider-section {
+    margin-top: 40px;
+}
+
+/* Full-width clickable image section styling */
+.clickable-category-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.category-images {
+    display: flex;
+    width: 100%;
+}
+
+.category-image {
+    width: 50%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.centered-overlay-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.centered-overlay-link h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.centered-overlay-link p {
+    font-size: 1.2rem;
+}
+
+/* Overlay styling for second clickable section with specific positioning */
+.second-clickable-category-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.Kids-collection {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.second-category-images {
+    display: flex;
+    width: 100%;
+}
+
+.second-category-image {
+    width: 50%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.second-left-link {
+    position: absolute;
+    width: 35%;
+    height: 20%;
+    top: 60%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.second-right-link {
+    position: absolute;
+    width: 35%;
+    height: 20%;
+    top: 60%;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.second-left-link h2,
+.second-right-link h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-slider-caption {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Static Image Section styling */
+.static-image-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.static-image-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.static-image-link img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.1s ease;
+    margin: 0 20px;
+}
+
+.static-image-link:hover img {
+    transform: scale(1.05);
+}
+
+.static-image-link p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* New Transition Image Section */
+.transition-image-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.transition-image-wrapper {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transition-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    margin: 0 20px;
+}
+
+.transition-image-wrapper p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+
+    .category-image,
+    .second-category-image {
+        height: 40vh;
+    }
+
+    .centered-overlay-link h2,
+    .second-left-link h2,
+    .second-right-link h2 {
+        font-size: 2rem;
+    }
+
+    .centered-overlay-link p {
+        font-size: 1rem;
+    }
+}
