@@ -8,6 +8,7 @@ import '../HomePage.css';
 const HomePage = ({ featuredProducts }) => {
     const navigate = useNavigate();
 
+
     const [currentImageSet, setCurrentImageSet] = useState(0);
 
     const imageSets = [

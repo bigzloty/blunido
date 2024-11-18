@@ -88,7 +88,7 @@ function SignUp() {
                     <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.
                 </p>
             </form>
-            <ToastContainer />
+            <ToastContainer  />
         </div>
     );
 }
