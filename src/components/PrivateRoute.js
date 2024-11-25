@@ -9,7 +9,7 @@ const PrivateRoute = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:5000/api/auth/isauth", {
+      .get("https://blunido-backend.onrender.com/api/auth/isauth", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
