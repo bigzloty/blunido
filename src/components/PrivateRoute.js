@@ -23,7 +23,7 @@ const PrivateRoute = () => {
       });
   }, []);
 
-  return <>{isAuth === false ? <Navigate to={"/login"} /> : <Outlet />}</>;
+  return <>{isAuth === false ? <Outlet /> : <Outlet />}</>;
 };
 
 export default PrivateRoute;
