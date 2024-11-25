@@ -16,7 +16,6 @@ const CartPage = () => {
     }, []);
 
     const flutterKEY = process.env.REACT_APP_FLUTTER_KEY
-    console.log(flutterKEY)
 
     const config = {
         public_key: flutterKEY,
